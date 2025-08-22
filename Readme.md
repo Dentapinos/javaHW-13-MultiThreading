@@ -39,22 +39,7 @@
 
 ---
 
-## 4. Как стартовать приложение
-
-### 4.1 Быстрый старт
-```bash
-git clone <repo-url>
-cd benchmark-counters
-javac -d out $(find src -name "*.java")
-java -cp out ru.javanumba.CompareExecution
-```
-
-### 4.2 Maven
-
-mvn package
-java -jar target/benchmark-counters-1.0.jar
-
-### 4.3 Что можно изменить
+## 4. Что можно изменить
 
 - Количество потоков.
 В `BenchmarkConfig.THREAD_COUNT` (по умолчанию 4).
