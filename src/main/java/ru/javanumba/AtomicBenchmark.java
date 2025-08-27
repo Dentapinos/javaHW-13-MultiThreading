@@ -36,7 +36,9 @@ public final class AtomicBenchmark {
 
     private static void await(ExecutorService pool) {
         try {
-            if (!pool.awaitTermination(1, TimeUnit.MINUTES)) pool.shutdownNow();
+            if (!pool.awaitTermination(1, TimeUnit.MINUTES)) {
+                pool.shutdownNow();
+            }
         } catch (InterruptedException e) {
             pool.shutdownNow();
             throw new RuntimeException("Interrupted", e);

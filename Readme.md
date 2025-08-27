@@ -77,6 +77,10 @@
 - Замер производительности и анализ результатов с использованием `System.nanoTime`.
 - Уменьшение количества boilerplate-кода за счёт утилитных методов.
 
+## 7. Пример работы программы
+
+![Typing SVG](example_run.png)
+
 ## Author
 
 - [@Dentapinos](https://github.com/Dentapinos)

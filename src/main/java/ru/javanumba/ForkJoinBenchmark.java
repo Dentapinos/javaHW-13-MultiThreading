@@ -12,13 +12,13 @@ public final class ForkJoinBenchmark {
 
         ExecutorService pool = Executors.newFixedThreadPool(BenchmarkConfig.THREAD_COUNT);
 
-        // Decrement phase
+        // Decrement
         int[] startParts   = splitEvenly(initialValue, BenchmarkConfig.THREAD_COUNT);
         int[] decParts     = splitEvenly(BenchmarkConfig.DECREMENT_TOTAL, BenchmarkConfig.THREAD_COUNT);
 
         int[] afterDec = invokeAndSum(pool, decParts, (idx) -> startParts[idx] - decParts[idx]);
 
-        // Increment phase
+        // Increment
         int[] incStartParts = splitEvenly(Arrays.stream(afterDec).sum(), BenchmarkConfig.THREAD_COUNT);
         int[] incParts      = splitEvenly(BenchmarkConfig.INCREMENT_TOTAL, BenchmarkConfig.THREAD_COUNT);
 
